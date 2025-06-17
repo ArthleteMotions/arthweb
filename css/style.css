@@ -3346,3 +3346,7 @@ p {
   border-radius: 15px;
   width: 100%;
 }
+
+.card-big.related-mobile{
+  background: #000;
+}
