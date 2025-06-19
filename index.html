@@ -7,12 +7,12 @@
       <meta
          content="Arthlete is a smart personal training app powered by AI. It helps you get in shape and stay in shape."
          name="description">
-      <meta content="Arthlete – Smart Personal Training App Powered by AI" property="og:title">
+      <meta content="Arthlete - Smart Personal Training App Powered by AI" property="og:title">
       <meta
          content="Arthlete is a smart personal training app powered by AI. It helps you get in shape and stay in shape."
          property="og:description">
       <meta content="images/681b7f4a8513f235556b0e8d_Opengraph.png" property="og:image">
-      <meta content="Arthlete – Smart AI Home Fitness Platform" property="twitter:title">
+      <meta content="Arthlete - Smart AI Home Fitness Platform" property="twitter:title">
       <meta
          content="Join Arthlete – AI-powered workouts, motion tracking, and real-time form correction at home. Smarter fitness for every body."
          property="twitter:description">
@@ -20,6 +20,9 @@
       <meta content="summary_large_image" name="twitter:card">
       <meta content="width=device-width, initial-scale=1" name="viewport">
       <link href="css/style.css" rel="stylesheet" type="text/css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
       <style>
          @media (max-width:767px) and (min-width:480px) {
          html.w-mod-js:not(.w-mod-ix) [data-w-id="1d5383cd-7a04-e67f-c38b-7ca89eb0d11c"] {
@@ -63,7 +66,7 @@
       <div class="website-wrapper">
          <div class="nav-wrapper">
             <div class="nav">
-               <a href="/" aria-current="page" class="bb-block w-inline-block w--current">
+               <a href="/" class="logo" aria-current="page" class="bb-block w-inline-block w--current">
                   <div class="svill="none"
                      xmlns="http://www.w3.org/2000/svg">
                      <path fill-rule="evenodd" clip-rule="evenodd"
@@ -73,12 +76,16 @@
                   </div>
                </a>
                <span style="display: flex; align-items: center; margin-right: 2rem;">
-               <img src="images/681b3a98fadbf880aabb366a_fav.png" alt="Arthlete Logo" style="height: 2rem; margin-right: 0.5rem;">
-               <span style="font-family: 'Inter', sans-serif; font-weight: bold; font-size: 1.5rem; color: #FE5F20;">Arthlete</span>
+               <img src="images/681b3a98fadbf880aabb366a_fav.png" alt="Arthlete Logo" style="height: 2rem; margin-right: 0.5rem;" >
+               <span style="font-family: 'Lexend', sans-serif;font-optical-sizing: auto; font-weight: bold; font-size: 1.5rem;font-style: normal; color: #FE5F20;" class="logo-text">Arthlete</span>
                </span>
-               <div class="nav-link_wrap"><a href="/#benefits" class="nav-link">Features</a><a href="#how-it-works" class="nav-link">How it works</a><a href="/#faq" class="nav-link">FAQs</a></div>
+               <div class="nav-link_wrap nav-links" id="nav-links">
+                  <a href="/#benefits" class="nav-link">Features</a>
+                  <a href="#how-it-works" class="nav-link">How it works</a>
+                  <a href="/#faq" class="nav-link">FAQs</a>
+               </div>
                <div class="w-layout-hflex nav-btn-group">
-                  <a href="https://forms.gle/RHsTMRrQkHoToqxXA" target="_blank" class="button small wt w-inline-block">
+                  <a href="https://forms.gle/RHsTMRrQkHoToqxXA" target="_blank" class="button small wt w-inline-block waitlist-btn">
                      <div>Join our waitlist</div>
                   </a>
                </div>
@@ -136,9 +143,11 @@
                data-src="https://cdn.prod.website-files.com/681b3a405ce7998b73555606/681e06a6d1bd071d6bd8a51f_asdHeroAnima.json"
                data-loop="0" data-direction="1" data-autoplay="0" data-renderer="svg" data-default-duration="0"
                data-duration="2"></div>
-            <img src="images/681dbffc33ba61f85ca8c9a2_HomePhone.png" loading="lazy"
+            <img 
+               src="images/681dbffc33ba61f85ca8c9a2_HomePhone.png" loading="lazy"
                data-w-id="1d5383cd-7a04-e67f-c38b-7ca89eb0d11c" sizes="(max-width: 1003px) 100vw, 1003px" alt=""
-               class="hero-mockup">
+               class="hero-mockup"
+            >
          </div>
       </div>
       <div class="section_intro">
@@ -777,6 +786,9 @@
       <script src="js/lenis.min.js"></script>
       <script>
          "use strict";
+         function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('show');
+         }
          
          if (Webflow.env("editor") === undefined) {
            const lenis = new Lenis({

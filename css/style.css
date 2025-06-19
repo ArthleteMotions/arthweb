@@ -2388,6 +2388,11 @@ p {
   display: flex;
   position: fixed;
   inset: 0% 0% auto;
+  width: 100%;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }
 
 .nav {
@@ -2400,6 +2405,109 @@ p {
   padding: .5rem .5rem .5rem 1rem;
   display: flex;
   box-shadow: 0 2px 20px #0000000f;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+.logo-text {
+  font-family: 'Lexend', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #FE5F20;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  font-family: 'Lexend', sans-serif;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #FE5F20;
+}
+
+.nav-btn-group .waitlist-btn {
+  background: #FE5F20;
+  color: white;
+  padding: 1rem 1rem;
+  font-weight: 600;
+  border-radius: 20px;
+  text-decoration: none;
+  font-family: 'Lexend', sans-serif;
+}
+
+/* Hamburger menu - hidden on large screens */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .logo {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0;
+  }
+
+  .nav-btn-group {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    top: 1.25rem;
+  }
 }
 
 .svg-flex {
@@ -2620,6 +2728,7 @@ p {
   max-width: 21rem;
   position: absolute;
   overflow: clip;
+  border: 5px solid #ffa8265b;
   box-shadow: 0 467px 131px #0000, 0 299px 120px #00000003, 0 168px 101px #00000005, 0 75px 75px #0000000a, 0 19px 41px #0000000d;
 }
 
